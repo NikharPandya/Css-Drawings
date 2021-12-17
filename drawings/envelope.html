@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelope</title>
+</head>
+<body>
+    
+<div class="envelope">
+    <div class="heart">
+        <p class="text">
+            NP
+       </p>
+    </div>
+</div>
+
+</body>
+<style>
+
+*{
+    box-sizing: border-box !important;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope{
+    width: 0;
+    height: 0;
+    border-top: 100px solid #eee;
+    border-right: 170px solid #ddd;
+    border-bottom: 100px solid #ccc;
+    border-left: 170px solid #ccc;
+}
+
+.heart{
+    width: 45px;
+    height: 45px;
+    background-color: olive;
+    border-radius: 13px;
+    transform: translate(-50%, -50%);
+    
+}
+
+.text{
+    margin: 0;
+    padding-top: 25%;
+    display: flex;
+   justify-content: center;
+   align-self: center;
+
+}
+
+
+</style>
+
+</html>
