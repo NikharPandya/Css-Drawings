@@ -6,23 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camera</title>
 </head>
+
+
+
+
 <body>
     
+    <div class="camera">
+        <div class="lens">
+            <div class="inner-lens">
+                <div class="inner-lens-2"></div>
+            </div>
+        </div>
+        <div class="flash"></div>
+        <div class="button"></div>
+    </div>
+
 </body>
+
+
+
+
 <style>
     *{
     box-sizing: border-box !important;
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    background: #233637;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.camera{
+    width: 205px;
+    height: 155px;
+    background-color: #d6d6d6;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px -13px black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lens{
+    width: 125px;
+    height: 125px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 0 0 #c0c0c0;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.inner-lens{
+    width: 105px;
+    height: 105px;
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.inner-lens-2{
+    width: 0;
+    height: 0;
+    border-top: 31px solid lightgreen;
+    border-bottom: 31px solid darkgreen;
+    border-left: 31px solid green;
+    border-right: 31px solid olive;
+    border-radius: 50%;
+}
+
+.flash{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    right: 15px;
+    top: 10px;
+    animation: blinker 0.7s linear infinite;
+}
+
+.button{
+    height: 5px;
+    width: 30px;
+    background-color: cadetblue;
+    position: absolute;
+    top: -5px;
+    left: 15px;
+    border-radius: 60px; 
+    
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
 
 </style>
 </html>
