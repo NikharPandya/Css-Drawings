@@ -8,12 +8,13 @@
     <title>Diamond</title>
 </head>
 <body>
-    
-<div class="diamond">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+ <div class="main"> 
+    <div class="diamond">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </div>
 
 </body>
@@ -39,6 +40,8 @@ body{
     height: 200px;
     transform: rotate(45deg);
 }
+
+
 
 span:nth-child(1){
     position: absolute;
@@ -84,6 +87,15 @@ span:nth-child(4){
     border-bottom: 50px solid #26c893;
     border-left: 50px solid #55ddb9;
     border-right: 50px solid #20bc7d;
+}
+
+.main{
+    animation: rotateAnimation 4s linear infinite;
+}
+
+@keyframes rotateAnimation {
+	from {transform: rotateY(45deg);}
+	to {transform: rotateY(225deg);}
 }
 
 </style>
